@@ -1,10 +1,9 @@
 # python-library-template
 
-Used docker-ci/docker-ci-python [TBD]
+[cookiecutter](https://github.com/audreyr/cookiecutter) template for a python-library that
+relies on docker-ci/docker-ci-python [TBD] for basic development activities.
 
 ## Init Python project
-
-The recommended way is to use [cookiecutter](https://github.com/audreyr/cookiecutter) tool:
 
     cookiecutter gh:gurunars/python-library
 
