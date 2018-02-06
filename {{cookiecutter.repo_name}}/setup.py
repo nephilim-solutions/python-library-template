@@ -31,7 +31,7 @@ def _get_requirements():
 
 
 setup(
-    name="{{cookiecutter.python_name}}",
+    name="{{cookiecutter.repo_name}}",
     provides=["{{cookiecutter.python_name}}"],
     install_requires=_get_requirements(),
     version=_get_version(),
