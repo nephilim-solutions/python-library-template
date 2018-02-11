@@ -5,7 +5,7 @@ IMG={{cookiecutter.repo_name}}.cache
 all: clean static-checks tests build build-docs
 
 cache:
-	echo "FROM gurunars/docker-ci-python" | docker build -t $(IMG) . -f-
+	echo "FROM nephilimsolutions/docker-ci-python" | docker build -t $(IMG) . -f-
 
 help tests static-checks build connect repl clean build-docs reformat: cache
 ifdef INTERACTIVE
