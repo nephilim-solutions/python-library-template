@@ -5,7 +5,7 @@ relies on docker-ci/docker-ci-python [TBD] for basic development activities.
 
 ## Init Python project
 
-    cookiecutter gh:nephilim-solutions/python-library
+    cookiecutter git@github.com:nephilim-solutions/python-library-template.git
 
 ## Working with the code
 
