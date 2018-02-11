@@ -5,7 +5,7 @@ BASE=nephilimsolutions/docker-ci-python
 
 all: clean static-checks tests build build-docs
 
-update:
+update-base:
 	docker pull ${BASE}
 
 cache:
@@ -18,5 +18,4 @@ else
 	@$(RUN) $(IMG) $@
 endif
 
-.PHONY: help build static-checks connect tests clean repl reformat all cache
-.DEFAULT_GOAL: help
+.PHONY: help build static-checks connect tests clean repl reformat all cache update-base
