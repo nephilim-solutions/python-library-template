@@ -1,11 +1,15 @@
 INTERACTIVE:=$(shell [ -t 0 ] && echo 1)
 RUN=docker run --rm -v $(PWD):/project
 IMG={{cookiecutter.repo_name}}.cache
+BASE=nephilimsolutions/docker-ci-python
 
 all: clean static-checks tests build build-docs
 
+update:
+	docker pull ${BASE}
+
 cache:
-	echo "FROM nephilimsolutions/docker-ci-python" | docker build -t $(IMG) . -f-
+	echo "FROM ${BASE}" | docker build -t $(IMG) . -f-
 
 help tests static-checks build connect repl clean build-docs reformat: cache
 ifdef INTERACTIVE

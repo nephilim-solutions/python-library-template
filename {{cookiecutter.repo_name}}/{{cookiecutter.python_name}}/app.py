@@ -2,6 +2,8 @@ def get_some_magic():
     """
     Returns some magic
 
+    Sample UML:
+
     .. uml::
 
         class Item {
@@ -9,6 +11,11 @@ def get_some_magic():
             +DateTime creationTime
             +DateTime modificationTime
         }
+
+    Sample doc test:
+
+    >>> get_some_magic()
+    'Magic!!'
 
     """
     return "Magic!!"
