@@ -34,10 +34,10 @@ here for you:
 
 1. Creates a docker container based on
    [docker-ci-python](https://hub.docker.com/r/nephilimsolutions/docker-ci-python/) image.
-1. Installs all dev requirements defined in `requirements-dev.txt`. If there
-   are no special dev requirements (e.g. if you ask yourself "What are the dev requirements?")
-   you may delete the file.
-1. Installs all runtime dependencies from `requirements.txt`
+1. Installs all the requirements defined in `setup.yml`:
+    - `install_requires`
+    - `setup_requires`
+    - `tests_require`
 1. Runs pep8, pyflakes and pylint checks on your code (note: it is intentionally very strict)
 1. Runs unit tests and docs tests and measures code coverage (fails if not 100%)
 1. Produces a **wheel** package ready for publication to e.g a PyPi repo
@@ -56,9 +56,9 @@ here for you:
 
 One of the distinct features of `docker-ci` based toolchain is a complete build environment
 isolation. This also applies to the way the toolchain caches all Python dependencies. Base
-image has `ONBUILD` steps to install the dependencies from `requirements-dev.txt` and
-`requirements.txt`. Thus as long as you don't update those - you may be sure that you will not
-waste time refetching, recompiling and reinstalling build and runtime dependencies.
+image has `ONBUILD` steps to install the dependencies `setup.yml` Thus as long as you don't
+update those - you may be sure that you will not waste time refetching,
+recompiling and reinstalling build and runtime dependencies.
 
 `make` command executes `make all` behind the scenes. Which includes several steps that can
 be executed independently on their own:
