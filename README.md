@@ -141,15 +141,6 @@ All meta information must be in `setup.yml`. This is done to eliminate the need 
 bunch of boilerplate imports for the `setup.py` file or face the limitations of `setup.cfg` file
 such as inability to denote `entry_points`.
 
-### requirements.txt
-
-All runtime dependencies should go here. For the sake of build correctness do not put them to
-`setup.yml`. Otherwise the toolchain will not be able to install those with `OBUILD` docker steps.
-
-### requirements-dev.txt
-
-Same as for `requirements.txt`. Keep development dependencies here. Not in `setup.yml`
-
 ### CHANGES
 
 A changelog file with a minimalistic structure:
@@ -164,9 +155,17 @@ Use [semantic version](https://semver.org/).
 
 All plain unit tests should go to this directory.
 
-### %PACKAGE-NAME%
+### %PACKAGE-NAME%/
 
 The library module itself should stay in the root of the repo. No `src` or `lib` directories are
 supported.
 
 *Flat is better than nested*
+
+### README.rst
+
+This file is going to be place both as a front page of your git repo and as
+a long description in `setup.py`
+
+Even though `Markdown` is a more popular option for GitHub based projects it
+still does not make sense to have a mix of documentation written in two formats.
