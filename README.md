@@ -1,7 +1,8 @@
 # python-library-template
 
 [cookiecutter](https://github.com/audreyr/cookiecutter) template for a python library that
-relies on docker-ci/docker-ci-python [TBD] for basic development activities.
+relies on [docker-ci/docker-ci-python](https://github.com/nephilim-solutions/docker-ci/tree/master/docker-ci-python)
+for basic development activities.
 
 ## Install cookiecutter (if not installed)
 
@@ -164,7 +165,7 @@ supported.
 
 ### README.rst
 
-This file is going to be place both as a front page of your git repo and as
+This file is going to be placed both as a front page of your git repo and as
 a long description in `setup.py`
 
 Even though `Markdown` is a more popular option for GitHub based projects it
